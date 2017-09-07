@@ -1,0 +1,7 @@
+[[source]]
+verify_ssl = true
+url = "https://pypi.python.org/simple"
+
+[packages]
+Flask = "==0.10.1"
+gunicorn = "==19.4.5"
