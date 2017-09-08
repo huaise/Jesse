@@ -10,14 +10,77 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/dist/css/flat-ui.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/header.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/index.css')}}">
 
 	<script type="text/javascript" src="{{ url_for('static', filename='vendor/dist/js/vendor/jquery.min.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='main/js/header.js') }}"></script>
 </head>
 <body>
-{% block body%}
-{% endblock %}
+<nav class="navbar navbar-default navbar-Amethyst" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+		   	<a class="navbar-brand" href="/">Jamie Blog</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-01">
+
+		    <ul class="nav navbar-nav">
+		     	<li class="active"><a href="/home">Home</a></li>
+		    </ul>
+		  	<ul class="nav navbar-nav">
+		     	<li><a href="/about">About</a></li>
+		    </ul>
+		</div>
+  	</div>
+</nav>
+<div class="back">
+	<div class="container home-container">
+		<div class="row">
+		{% block body%}
+		{% endblock %}
+		<div class="col-md-3" id="category-fix">
+				<div class="share mrl the-font" id="home-category">
+				<div>
+					<div class="category-title">
+						<h5><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>CATEGORY</h5>
+					</div>
+					<ul>
+						{% block  category %}
+						{% endblock %}
+					</ul>
+				</div>
+				</div>
+				<div class="tile">
+					<div class="tile-div">
+						<img src="{{ url_for('static',filename='public/image/pic.png') }}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="header-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<p class="lead"> Designed and built with all the love in the world by the Mr.<a href="/">Jamie</a>.</p>
+				<p >@This web page is completed by Python Flask.</p>
+			</div>
+			<div class="col-md-5">
+				<div>
+					<h5><strong>CONTACT ME</strong></h5>
+					<ul>
+						<li><a href="https://github.com/huaise" target="_blank"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Github</a></li>
+						<li><a href="javascript:void(0)"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> WeCaht: Niubilitilangge</a></li>
+						<li><a href="javascript:void(0)"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Email:<strong> huaise1239@163.com</strong></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<p> <small>© COPYRIGHT BY Jamie 2017</small></p>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

@@ -1,10 +1,20 @@
-{% extends "main/header.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamie Blog</title>
 
-{% block title %}
-Jamie Blog
-{% endblock %}
+  <link rel="shortcut icon" href="{{ url_for('static',filename='main/image/index.ico') }}">
 
-{% block body %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/dist/css/flat-ui.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main/css/index.css')}}">
+
+  <script type="text/javascript" src="{{ url_for('static', filename='vendor/dist/js/vendor/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+</head>
+<body>
 	<div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
@@ -13,16 +23,16 @@ Jamie Blog
             <div class="inner">
               <h3 class="masthead-brand"><a href="/">Jamie Blog</a></h3>
               <nav class="nav nav-masthead">
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="#">Aboutme</a>
+                <a class="nav-link" href="/home">Home</a>
+                <a class="nav-link" href="/about">About</a>
               </nav>
             </div>
           </div>
 
           <div class="inner cover">
             <h1 class="cover-heading">Hello, I am Jamie!</h1>
-            <p class="lead"> This blog is written by an independent Python language, I'm just a happy programmer , Work for one's interests and ideals .  </p>
-            <p class="lead"> But please believe me, Attitude decides everything  give me a chance I will give you a big surprise, Thank you !</p>
+            <p class="lead"> This blog is written by an independent Python language, I'm just a happy programmer, Work for one's interests and ideals .  </p>
+            <p class="lead"> But please believe me, Attitude decides everything, give me a chance, I will give you a big surprise, Thank you !</p>
             <p class="lead">
               <a href="#" class="btn btn-lg btn-secondary about">About Me</a>
             </p>
@@ -30,11 +40,13 @@ Jamie Blog
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="https://getbootstrap.com">Jamie Blog</a>, by <a href="https://github.com/">@Github</a>.</p>
+              <p> Copyright © 2017 Jamie. All rights reserved. </p>
+              <p> <a href="https://github.com/huaise" target="_blank">@Github </a> </p>
             </div>
           </div>
 
         </div>
       </div>
     </div>
-{% endblock %}
+</body>
+</html>

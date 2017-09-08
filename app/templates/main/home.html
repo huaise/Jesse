@@ -1,0 +1,43 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main/css/home.css') }}">
+</head>
+
+{% extends "main/header.html" %}
+{% block body %}
+
+<div class="col-md-9">
+	<article class="article the-font">
+		<a href="/post/"><h3> 这个是标题 </h3></a>
+		<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="time-color"> 2017-09-07 </span></small></p>
+		<div class="post-alert">本博客采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议 !</div>
+		<p>这个是内容 </p>
+		<blockquote>
+		<p>KNN算法算是机器学习里面较为简单的算法了，理解简单</p>
+		</blockquote>
+		<div class="body-bottom">
+			<p><a href="/category/"><span class="label label-default text-left"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>这个是所属分类</span>
+			<a href="/post/" class="detail"><button class="btn  btn-primary btn-wide text-right"><span class="glyphicon glyphicon-fireglyphicon " aria-hidden="true"></span>查看详情</button></a></p>
+		</div>
+	</article>
+</div>
+<div class="col-md-9">
+	<article class="article the-font">
+		<a href="/post/"><h3> 这个是标题 </h3></a>
+		<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="time-color"> 2017-09-07 </span></small></p>
+		<div class="post-alert">本博客采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议 !</div>
+		<p>这个是内容 </p>
+		<blockquote>
+		<p>KNN算法算是机器学习里面较为简单的算法了，理解简单</p>
+		</blockquote>
+		<div class="body-bottom">
+			<p><a href="/category/"><span class="label label-default text-left"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>这个是所属分类</span>
+			<a href="/post/" class="detail"><button class="btn  btn-primary btn-wide text-right"><span class="glyphicon glyphicon-fireglyphicon " aria-hidden="true"></span>查看详情</button></a></p>
+		</div>
+	</article>
+</div>
+{% endblock%}
+
+{% block  category %}
+<li class="presentation" ><a href="/category/" ><p>><span class="font-span"> 文章我的天好像我</span><span class="badge text-right count-category">112</span></p></a></li>
+<li class="presentation" ><a href="/category/" ><p>><span class="font-span"> 文章我的天好像我</span><span class="badge text-right count-category">112</span></p></a></li>
+{% endblock %}
