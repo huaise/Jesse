@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "df5e73119b4e907cd68687235b3a13d62c8f632dc3732fb5593f1658ebbba8ac"
+            "sha256": "0483bd4758e40f4c9f12042408db172d8b2443eee3976d05046c23b7ccb954d8"
         },
         "pipfile-spec": 1,
         "requires": {},
@@ -54,6 +54,12 @@
         },
         "markupsafe": {
             "version": "==1.0"
+        },
+        "olefile": {
+            "version": "==0.44"
+        },
+        "pillow": {
+            "version": "==4.2.1"
         },
         "psycopg2": {
             "version": "==2.7.3.1"
