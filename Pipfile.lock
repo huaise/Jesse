@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f69eebaa9273796b31228577e123460fd7b9df281c837d5c8f80603c7d6ce3cf"
+            "sha256": "df5e73119b4e907cd68687235b3a13d62c8f632dc3732fb5593f1658ebbba8ac"
         },
         "pipfile-spec": 1,
         "requires": {},
@@ -13,11 +13,32 @@
         ]
     },
     "default": {
+        "alembic": {
+            "version": "==0.9.5"
+        },
+        "bleach": {
+            "version": "==2.0.0"
+        },
+        "datetime": {
+            "version": "==4.2"
+        },
         "flask": {
             "version": "==0.10.1"
         },
+        "flask-migrate": {
+            "version": "==2.1.1"
+        },
+        "flask-script": {
+            "version": "==2.0.6"
+        },
+        "flask-sqlalchemy": {
+            "version": "==2.2"
+        },
         "gunicorn": {
             "version": "==19.4.5"
+        },
+        "html5lib": {
+            "version": "==0.999999999"
         },
         "itsdangerous": {
             "version": "==0.24"
@@ -25,11 +46,41 @@
         "jinja2": {
             "version": "==2.9.6"
         },
+        "mako": {
+            "version": "==1.0.7"
+        },
+        "markdown": {
+            "version": "==2.6.9"
+        },
         "markupsafe": {
             "version": "==1.0"
         },
+        "psycopg2": {
+            "version": "==2.7.3.1"
+        },
+        "python-dateutil": {
+            "version": "==2.6.1"
+        },
+        "python-editor": {
+            "version": "==1.0.3"
+        },
+        "pytz": {
+            "version": "==2017.2"
+        },
+        "six": {
+            "version": "==1.10.0"
+        },
+        "sqlalchemy": {
+            "version": "==1.1.14"
+        },
+        "webencodings": {
+            "version": "==0.5.1"
+        },
         "werkzeug": {
             "version": "==0.12.2"
+        },
+        "zope.interface": {
+            "version": "==4.4.2"
         }
     },
     "develop": {}

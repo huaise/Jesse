@@ -1,7 +1,14 @@
 import os
-from app import new_app
+from app import new_app,db
+from flask.ext.script import Manager
+from flask.ext.migrate import Migrate, MigrateCommand
 
-app = new_app(os.getenv('FLASK_CONFIG') or 'default')
+app = new_app()
+
+migrate = Migrate(app, db)
+
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port = 8080, debug = True)
+    manager.run()
