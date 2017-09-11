@@ -46,19 +46,19 @@
 			</div>
 			<div class="col-md-3 " id="category-fix">
 				<div class="share mrl the-font" id="home-category">
-				<div>
-					<div class="category-title">
-						<h5><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>CATEGORY</h5>
+					<div>
+						<div class="category-title">
+							<h5><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>CATEGORY</h5>
+						</div>
+						<ul>
+							{% block  category %}
+							{% endblock %}
+						</ul>
 					</div>
-					<ul>
-						{% block  category %}
-						{% endblock %}
-					</ul>
-				</div>
 				</div>
 				<div class="tile">
 					<div class="tile-div">
-						<img src="{{ url_for('static',filename='public/image/pic.png') }}">
+						<img src="{{ url_for('static',filename='public/image/pic.jpg') }}">
 					</div>
 				</div>
 			</div>

@@ -11,9 +11,7 @@ class Post(db.Model):
     body_html = db.Column(db.Text)
     summury=db.Column(db.Text)
     summury_html=db.Column(db.Text)
-
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-
     category_id=db.Column(db.Integer,db.ForeignKey('categorys.id'))
 
     @staticmethod

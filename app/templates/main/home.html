@@ -4,36 +4,28 @@
 
 {% extends "main/header.html" %}
 {% block body %}
+{% import "main/_macros.html" as macro %}
 
+{% for post in posts %}
 <article class="article the-font">
-	<a href="/post/"><h3> 这个是标题 </h3></a>
-	<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="time-color"> 2017-09-07 </span></small></p>
+	<a href="/post/"><h3> {{ post.title }} </h3></a>
+	<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="time-color"> {{ post.timestamp }} </span></small></p>
 	<div class="post-alert">本博客采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议 !</div>
-	<p>这个是内容 </p>
+	<p>{{ post.summury_html }} </p>
 	<blockquote>
-	<p>KNN算法算是机器学习里面较为简单的算法了，理解简单</p>
+	<p>{{ post.summury }}</p>
 	</blockquote>
 	<div class="body-bottom">
-		<p><a href="/category/"><span class="label label-default text-left"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>这个是所属分类</span>
+		<p><a href="/category/"><span class="label label-default text-left"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>{{ post.category.tag }}</span>
 		<a href="/post/" class="detail"><button class="btn  btn-primary btn-wide text-right"><span class="glyphicon glyphicon-fireglyphicon " aria-hidden="true"></span>查看详情</button></a></p>
 	</div>
 </article>
-<article class="article the-font">
-	<a href="/post/"><h3> 这个是标题 </h3></a>
-	<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="time-color"> 2017-09-07 </span></small></p>
-	<div class="post-alert">本博客采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议 !</div>
-	<p>这个是内容 </p>
-	<p>这个是内容 </p>
-	<p>这个是内容 </p>
-	<blockquote>
-	<p>KNN算法算是机器学习里面较为简单的算法了，理解简单</p>
-	</blockquote>
-	<div class="body-bottom">
-		<p><a href="/category/"><span class="label label-default text-left"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>这个是所属分类</span>
-		<a href="/post/" class="detail"><button class="btn  btn-primary btn-wide text-right"><span class="glyphicon glyphicon-fireglyphicon " aria-hidden="true"></span>查看详情</button></a></p>
-	</div>
-</article>
+{% endfor %}
 {% endblock%}
+
+{% if pagination %}
+{{ macro.pagination_widget(pagination,'.index') }}
+{% endif %}
 
 {% block  category %}
 {% for category in categorys %}

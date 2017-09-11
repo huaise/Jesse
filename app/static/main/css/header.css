@@ -33,3 +33,24 @@ body {
 .share  li {
 	padding: 0;
 }
+
+.tile {
+	margin-top:2rem;
+	background-color:white;
+}
+
+/*.tile > div {
+	border:5px solid #FFF;
+	border-radius:300px;
+	width:128px;
+	height:128px;
+	margin:0px auto;
+	position:relative;
+	background:#88ACDB none repeat scroll 0% 0%;
+	overflow:hidden
+}
+*/
+.tile > div  > image{
+	width:100%;
+	height:100%;
+}
