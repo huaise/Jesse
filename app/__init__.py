@@ -1,8 +1,10 @@
 from flask import Flask,render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from config import Config
+from flask.ext.markdown import Markdown
 
 db = SQLAlchemy()
+markdown = Markdown
 
 def new_app():
 	app = Flask(__name__)
@@ -11,6 +13,7 @@ def new_app():
 	app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 	
 	db.init_app(app)
+	markdown(app)
 	
 	# load home page
 	from .main import main as main_blueprint

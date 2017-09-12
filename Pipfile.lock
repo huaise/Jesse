@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0483bd4758e40f4c9f12042408db172d8b2443eee3976d05046c23b7ccb954d8"
+            "sha256": "cc3fbb9324fd4516c28c32de2549b98b3f1053e4c6a9454729913a99fb6e97e7"
         },
         "pipfile-spec": 1,
         "requires": {},
@@ -24,6 +24,9 @@
         },
         "flask": {
             "version": "==0.10.1"
+        },
+        "flask-markdown": {
+            "version": "==0.3"
         },
         "flask-migrate": {
             "version": "==2.1.1"

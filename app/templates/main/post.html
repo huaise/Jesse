@@ -1,0 +1,24 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main/css/post.css') }}">
+</head>
+
+{% extends  "main/header.html" %}
+
+{% block title %}
+{{ post.title }}
+{% endblock%}
+
+{% block body %}
+<div class="col-md-12">
+	<article class="article the-font">
+		<h2>{{ post.title }}</h2>
+		<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span style="color:#8C8C8C;">{{ post.timestamp }}</span></small></p>
+		<div class="post-alert">本博客采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议</div>
+		<p>{{ post.body|safe|markdown }}</p>
+		<div class="post-bottom">
+			<a href="/category/{{ post.category.tag }}"><span class="label label-default"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> {{ post.category.tag }}</span></a>
+			<a href="/" class="btn btn-xs " style="float:right">返回首页<span class=" glyphicon glyphicon-log-out" aria-hidden="true"></span></a>
+		</div>
+	</article>
+</div>
+{% endblock %}

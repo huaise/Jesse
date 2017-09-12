@@ -3,32 +3,39 @@
 </head>
 
 {% extends "main/header.html" %}
+
+{% block title %}
+{% if tag %}
+{{tag.tag}}
+{% else %}
+Home 
+{% endif %}
+{% endblock %}
+
+
 {% block body %}
 {% import "main/_macros.html" as macro %}
 
+<div class="col-md-9">
 {% for post in posts %}
-<article class="article the-font">
-	<a href="/post/"><h3> {{ post.title }} </h3></a>
-	<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="time-color"> {{ post.timestamp }} </span></small></p>
-	<div class="post-alert">本博客采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议 !</div>
-	<p>{{ post.summury_html }} </p>
-	<blockquote>
-	<p>{{ post.summury }}</p>
-	</blockquote>
-	<div class="body-bottom">
-		<p><a href="/category/"><span class="label label-default text-left"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>{{ post.category.tag }}</span>
-		<a href="/post/" class="detail"><button class="btn  btn-primary btn-wide text-right"><span class="glyphicon glyphicon-fireglyphicon " aria-hidden="true"></span>查看详情</button></a></p>
-	</div>
-</article>
+	<article class="article the-font">
+		<a href="/post/{{ post.id }}"><h3> {{ post.title }} </h3></a>
+		<p><small><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="time-color"> {{ post.timestamp }} </span></small></p>
+		<div class="post-alert">本博客采用创作共用版权协议, 要求署名、非商业用途和保持一致. 转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议 !</div>
+		<p>{{ post.summury_html }} </p>
+		<blockquote>
+		<p>{{ post.summury }}</p>
+		</blockquote>
+		<div class="body-bottom">
+			<p><a href="/category/{{post.category.tag}}"><span class="label label-default text-left"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>{{ post.category.tag }}</span>
+			<a href="/post/{{ post.id }}" class="detail"><button class="btn  btn-primary btn-wide text-right"><span class="glyphicon glyphicon-fireglyphicon " aria-hidden="true"></span>查看详情</button></a></p>
+		</div>
+	</article>
 {% endfor %}
+</div>
 {% endblock%}
 
 {% if pagination %}
 {{ macro.pagination_widget(pagination,'.index') }}
 {% endif %}
 
-{% block  category %}
-{% for category in categorys %}
-<li class="presentation" ><a href="/category/" ><p class="p-margin">><span class="font-span"> {{ category.tag|upper }}</span><span class="badge text-right count-category">{{ category.count }}</span></p></a></li>
-{% endfor %}
-{% endblock %}
