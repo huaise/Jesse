@@ -22,7 +22,7 @@ def category(tag):
 	tag = Category.query.filter_by(tag=tag).first_or_404()
 	pagination = Post.query.filter_by(category_id = tag.id).order_by(Post.timestamp.desc()).paginate(page, per_page = PAGE_COUNT, error_out = False)
 	posts = pagination.items
-	categorys = Category.query.order_by(Category.count)
+	categorys = Category.query.order_by(Category.count.desc())
 	return render_template('main/home.html', categorys=categorys, posts=posts, pagination=pagination, tag=tag)
 
 @main.route('/post/<int:id>',methods=['GET'])
