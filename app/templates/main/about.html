@@ -1,0 +1,104 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main/css/lib.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main/css/about.css') }}">
+</head>
+
+{% extends "main/header.html" %}
+
+{% block title %}
+关于网站
+{% endblock %}
+
+{% block body %}
+	<div class="article col-md-12">
+		<div align="center"><img src="{{ url_for('static', filename='public/image/tx.jpg') }}" style="height:220px;width:220px;border-radius:110px;display:block;text-align:center" align="center"></div>
+		<br>
+		<p class="lead text-center">Jesse</p>
+		<p class="text-center"><em><span style="color:#ABAAAA">Your fingertips have the power to change the world!	</span></em></p>
+		<br>
+
+
+		<!-- <p class="palette-paragraph"><strong>这个是我的个人网站，如果你喜欢，那就按下下面的"LIKE”按钮，给我动力继续写吧</strong></p>
+		<div  style="cursor:pointer" class="btn btn-danger btn-large btn-block btn-like-add">LIKE <span class="glyphicon glyphicon-heart" aria-hidden="True"></span></div>
+		<hr> -->
+		<!-- <p >已经有了这么多<strong>LIKE</strong>:<a href="#"><span id="liked"></span></a></p> -->
+	</div>
+	<div class="col-md-12">
+		<article class="article the-font">
+			<h4>个人信息：</h4>
+			<hr>
+			<ul>
+				<li>姓名：杜海浪</li>
+				<li>姓别：男</li>
+				<li>网名：Jesse</li>
+				<li>年龄：21</li>
+				<li>生日：1996/08/05</li>
+				<li>居住地：深圳</li>
+				<br>
+			</ul>
+			<h4>联系方式：</h4>
+			<hr>
+			<ul>
+				<li>Email: <a href="#">huaise1239@163.com</a></li>
+				<li>WeChat: Niubilitilangge</li>
+				<li>QQ: 910052110</li>
+				<br>
+
+			</ul>
+			<h4>个人代码库：</h4>
+			<hr>
+			<ul>
+				<li>GITHUB:<a href="https://github.com/huaise">https://github.com/huaise</a></li>
+				<li>该网站源代码：<a href="https://github.com/salamer/GAGASALAMER_BLOG">https://github.com/huaise/jesse-me</a></li>
+				<br>
+
+			</ul>
+			<h4>已学过的：</h4>
+			<hr>
+			<ul>
+				<li>php</li>
+				<li>php框架 Ci Laravel</li>
+				<li>python(flask框架（该网站就是基于flask编写的）heroko部署 爬虫 科学处理与数据分析</li>
+				<li>sql mysql postgresql redis memcache</li>
+				<li>svn git</li>
+				<li>docker heroku </li>
+				<li>jquery vue bootstrap</li>
+				<li>ubuntu 基于Linux 开发</li>
+				<br>
+			</ul>
+			<h4>发展方向：</h4>
+			<hr>
+			<ul>
+				<li>Web后端开发</li>
+				<li>搜索引擎</li>
+				<li>数据挖掘</li>
+				<li>用户体验学习</li>
+				<li>性能优化,并发处理</li>
+				<br>
+			</ul>
+			<h4>其他兴趣：</h4>
+			<hr>
+			<ul>
+				<li>语言：英语 Ruby JavaEE</li>
+				<li>游戏 段子 计算机科技</li>
+				<li>旅游 吃货</li>
+				<br>
+				
+			</ul>
+			
+			<h4>格言：</h4>
+			<hr>
+			<blockquote>
+				<p></p>
+				<p>每个人都不容易，</p>
+				<p>经历越多越容易成长。</p>
+			</blockquote>
+			<hr>
+			<!-- <p >我想感谢 <strong>BIG SEAN,KANYE WEST</strong><strong>和 JUSTING BIEBER </strong>，感谢他们的歌曲陪伴了我走过一个个敲键盘的夜晚。</p> -->
+				
+		</article>
+	</div>
+{% endblock%}
+
+
+

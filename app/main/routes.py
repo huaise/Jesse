@@ -30,6 +30,9 @@ def post(id):
 	post = Post.query.get_or_404(id)
 	categorys = Category.query.order_by(Category.count)
 	return render_template("main/post.html", post=post, categorys=categorys, category_hidden=True)
+@main.route('/about')
+def about():
+	return render_template("main/about.html", category_hidden=True)
 
 @main.app_errorhandler(404)
 def page_not_found(error):
